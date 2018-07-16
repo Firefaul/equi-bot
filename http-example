@@ -1,4 +1,1 @@
-local domain = 'infinite-coast-65776.herokuapp.com' -- Make sure there is no http:// in here!
-local key = "GhkljgHKYJGhjkGhjKGhjmGYukghkjafheausdolfheUSALHSxjdulkhwaulkshdxjWKLAsDHWEKJLAgsfhLJKgsHDLGWAhlkjsGDHL"
-local groupId = 4271865
 http.post('http://infinite-coast-65776.herokuapp.com/handleJoinRequest/4271865/'..username..'/true")
