@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const day = 86400000;
 
 client.on('ready', () => {
-    console.log('Ready!');
+    
 });
 
 client.on('message', async message => {
@@ -24,13 +24,13 @@ client.on('message', async message => {
 	}, day);
 	setTimeout(function(){
 		if (ups > downs){
-			console.log('approve');
+			
 		};
 		if (ups < downs){
-			console.log('deny');
+			
 		};
 		if (ups === downs){
-			console.log('deny')
+		
 		};
 	}, day);
   };
