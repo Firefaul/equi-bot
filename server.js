@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const day = 86400000;
 
 client.on('ready', () => {
-    
+    console.log('Logged in as equinautical bot');
 });
 
 client.on('message', async message => {
@@ -42,7 +42,7 @@ if (message.channel.name === 'refresher') {
 	setInterval(() => {
   		message.channel.send("Refreshed")
 	}, 280000);
-}
+};
 });
 
 
