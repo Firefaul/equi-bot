@@ -24,13 +24,13 @@ client.on('message', async message => {
 	}, day);
 	setTimeout(function(){
 		if (ups > downs){
-			
+			console.log('approved');
 		};
 		if (ups < downs){
-			
+			console.log('denied');
 		};
 		if (ups === downs){
-		
+			console.log('approved');
 		};
 	}, day);
   };
