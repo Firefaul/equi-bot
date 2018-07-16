@@ -117,7 +117,8 @@
     "lint": "eslint src",
     "lint:fix": "eslint --fix src",
     "test": "npm run lint && npm run docs:test",
-    "webpack": "parallel-webpack"
+    "webpack": "parallel-webpack",
+    "start": "node index.js"
   },
   "types": "./typings/index.d.ts",
   "version": "11.3.2"
