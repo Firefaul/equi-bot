@@ -1,1 +1,1 @@
-worker: node server.js
+worker: node https://github.com/Firefaul/equi-bot/blob/master/server.js
