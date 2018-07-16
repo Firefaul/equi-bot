@@ -47,6 +47,5 @@ if (message.channel.name === 'refresher') {
 
 
 
-
-client.login('NDY4MDkxNzgzMzc3NTg0MTI4.Di5P3g._5JV4N2KKypg2kjaL0tRW9yTj0Y');
+client.login(process.env.BOT_TOKEN);
 
