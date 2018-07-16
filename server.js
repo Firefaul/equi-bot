@@ -1,4 +1,4 @@
-﻿const Discord = require('https://github.com/Firefaul/equi-bot/tree/master/node_modules/discord.js');
+﻿const Discord = require('discord.js');
 const client = new Discord.Client();
 const day = 86400000;
 
