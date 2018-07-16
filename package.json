@@ -71,7 +71,8 @@
     "snekfetch": "^3.6.4",
     "tweetnacl": "^1.0.0",
     "ws": "^4.0.0",
-    "discord.js": "^11.3.2"
+    "discord.js": "^11.3.2",
+    "roblox.js": "^4.0.2"
   },
   "deprecated": false,
   "description": "A powerful library for interacting with the Discord API",
