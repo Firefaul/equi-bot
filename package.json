@@ -24,7 +24,7 @@
   "_resolved": "https://registry.npmjs.org/discord.js/-/discord.js-11.3.2.tgz",
   "_shasum": "3c4074c1cb1a4916582fb96ded5ffa1324411f95",
   "_spec": "discord.js",
-  "_where": "C:\\Users\\firef_000\Desktop\EquiBot\node-modules",
+  "_where": "https://github.com/Firefaul/equi-bot/tree/master/node_modules",
   "author": {
     "name": "Amish Shah",
     "email": "amishshah.2k@gmail.com"
