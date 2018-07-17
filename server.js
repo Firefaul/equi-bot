@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 const groupId = 4271865;
 
-roblox.login({username: "EquinauticalBot", password: process.env.PASSWORD})
+Roblox.login({username: "EquinauticalBot", password: process.env.PASSWORD})
 
 const day = 86400000;
 
