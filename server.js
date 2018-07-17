@@ -46,6 +46,38 @@ client.on('message', async message => {
 		};
 	}, day);
   };
+ if (message.channel.name === 'promotion-approval') {
+	await message.react('👍');
+	await message.react('👎');
+	var reacts = message.reactions;
+	var ups = 0;
+	var downs = 0;
+	var username = message.content.substring(0,message.content.indexOf("is ready") - 1);
+	Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'Your test is being reviewd and you will be notified in 24 hours of your results.')
+	const reactions = message.awaitReactions(reaction => {
+		if (reaction.emoji.name === '👍') {
+			ups = reaction.count
+		};
+		if (reaction.emoji.name === '👎') {
+			downs = reaction.count
+		};
+	}, day);
+	setTimeout(function(){
+		if (ups > downs){
+			console.log('approved');
+			Roblox.changeRank(groupId, oblox.getIdFromUsername(username), 1);
+			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have been promoted.')
+		};
+		if (ups < downs){
+			console.log('denied');
+			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have not been promoted.')
+		};
+		if (ups === downs){
+			console.log('approved');
+			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have not been promoted.')
+		};
+	}, day);
+  };
   if (message.channel.name === 'polls') {
 	await message.react('👍');
 	await message.react('👎');
