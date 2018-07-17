@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 const groupId = 4271865;
 
-roblox.login({username: "Equi_Bot", password: process.env.PASSWORD}).then((success) => {
+roblox.login({username: "EquinauticalBot", password: process.env.PASSWORD}).then((success) => {
 
 }).catch(() => {console.log("Failed to login.");});
 
