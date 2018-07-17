@@ -1,6 +1,11 @@
 ﻿const Discord = require('discord.js');
 const Roblox = require('roblox-js');
 const client = new Discord.Client();
+
+roblox.login({username: "EquinauticalBot", password: "Password_Here"}).then((success) => {
+
+}).catch(() => {console.log("Failed to login.");});
+
 const day = 86400000;
 
 client.on('ready', () => {
