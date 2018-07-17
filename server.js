@@ -21,6 +21,7 @@ client.on('message', async message => {
 	var ups = 0;
 	var downs = 0;
 	var username = message.content.substring(0,message.content.indexOf("wants to") - 1);
+	Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'Your test is being reviewd and you will be notified in 24 hours of your results.')
 	const reactions = message.awaitReactions(reaction => {
 		if (reaction.emoji.name === '👍') {
 			ups = reaction.count
@@ -33,14 +34,17 @@ client.on('message', async message => {
 		if (ups > downs){
 			console.log('approved');
 			Roblox.handleJoinRequest(groupId, username, true);
+			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have been accepted into Equinautical.')
 		};
 		if (ups < downs){
 			console.log('denied');
 			Roblox.handleJoinRequest(groupId, username, false);
+			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have not been accepted into Equinautical.')
 		};
 		if (ups === downs){
 			console.log('approved');
 			Roblox.handleJoinRequest(groupId, username, false);
+			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have not been accepted into Equinautical.')
 		};
 	}, day);
   };
