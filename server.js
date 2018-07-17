@@ -22,6 +22,7 @@ client.on('message', async message => {
 	var reacts = message.reactions;
 	var ups = 0;
 	var downs = 0;
+	var username = message.content.substring(0,message.context.indexOf("wants to") - 1);
 	const reactions = message.awaitReactions(reaction => {
 		if (reaction.emoji.name === '👍') {
 			ups = reaction.count
