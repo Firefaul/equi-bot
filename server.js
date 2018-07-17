@@ -23,6 +23,7 @@ client.on('message', async message => {
 	var ups = 0;
 	var downs = 0;
 	var username = message.content.substring(0,message.context.indexOf("wants to") - 1);
+	  console.log(username+'hey')
 	const reactions = message.awaitReactions(reaction => {
 		if (reaction.emoji.name === '👍') {
 			ups = reaction.count
@@ -34,12 +35,15 @@ client.on('message', async message => {
 	setTimeout(function(){
 		if (ups > downs){
 			console.log('approved');
+			Roblox.handleJoinRequest(groupId, username, true);
 		};
 		if (ups < downs){
 			console.log('denied');
+			Roblox.handleJoinRequest(groupId, username, false);
 		};
 		if (ups === downs){
 			console.log('approved');
+			Roblox.handleJoinRequest(groupId, username, false);
 		};
 	}, day);
   };
