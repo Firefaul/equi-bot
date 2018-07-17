@@ -33,17 +33,15 @@ client.on('message', async message => {
 	setTimeout(function(){
 		if (ups > downs){
 			console.log('approved');
-			Roblox.handleJoinRequest(groupId, username, true);
+			Roblox.changeRank(groupId, oblox.getIdFromUsername(username), 1);
 			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have been accepted into Equinautical.')
 		};
 		if (ups < downs){
 			console.log('denied');
-			Roblox.handleJoinRequest(groupId, username, false);
 			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have not been accepted into Equinautical.')
 		};
 		if (ups === downs){
 			console.log('approved');
-			Roblox.handleJoinRequest(groupId, username, false);
 			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have not been accepted into Equinautical.')
 		};
 	}, day);
