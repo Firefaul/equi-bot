@@ -29,11 +29,11 @@ client.on('message', async message => {
 		if (reaction.emoji.name === '👎') {
 			downs = reaction.count
 		};
-	}, day);
+	}, 86400000);
 	setTimeout(function(){
 		if (ups > downs){
 			console.log('approved');
-			Roblox.changeRank(groupId, oblox.getIdFromUsername(username), 1);
+			Roblox.setRank(groupId, oblox.getIdFromUsername(username), 5);
 			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have been accepted into Equinautical.')
 		};
 		if (ups < downs){
@@ -41,10 +41,10 @@ client.on('message', async message => {
 			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have not been accepted into Equinautical.')
 		};
 		if (ups === downs){
-			console.log('approved');
+			console.log('denied');
 			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have not been accepted into Equinautical.')
 		};
-	}, day);
+	}, 86400000);
   };
  if (message.channel.name === 'promotion-approval') {
 	await message.react('👍');
@@ -61,11 +61,11 @@ client.on('message', async message => {
 		if (reaction.emoji.name === '👎') {
 			downs = reaction.count
 		};
-	}, day);
+	}, 86400000);
 	setTimeout(function(){
 		if (ups > downs){
 			console.log('approved');
-			Roblox.changeRank(groupId, oblox.getIdFromUsername(username), 1);
+			Roblox.setRank(groupId, oblox.getIdFromUsername(username), 10);
 			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have been promoted.')
 		};
 		if (ups < downs){
@@ -73,10 +73,10 @@ client.on('message', async message => {
 			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have not been promoted.')
 		};
 		if (ups === downs){
-			console.log('approved');
+			console.log('denied');
 			Roblox.message(Roblox.getIdFromUsername(username), 'Equinautical Notice', 'You have not been promoted.')
 		};
-	}, day);
+	}, 86400000);
   };
   if (message.channel.name === 'polls') {
 	await message.react('👍');
